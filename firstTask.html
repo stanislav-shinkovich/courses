@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class=" d-flex">
-    <div class="container w-100 py-5">
+    <div class="container w-100 pt-5">
         <main class="d-flex">
             <div class="flex-2">
                 <nav class="main-nav">
@@ -35,7 +35,7 @@
             </div>
 
             <div class="flex-5 ml-2">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between h-100">
                     <div class="plate d-flex">
 
                         <div>
@@ -114,46 +114,46 @@
                 </a>
             </div>
             <div class="d-flex flex-6">
-            <div class="header-nav position-relative flex-1 d-flex align-self-center">
-                <input type="checkbox" id="check"/>
-                <div class="angle"></div>
-                <label for="check">Producten</label>
-                <nav>
-                    <ul class="">
-                        <li><a href="#">headsets</a></li>
-                        <li><a href="#">eshe 4et</a></li>
-                        <li><a href="#">van mor</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div class="header-nav position-relative flex-1 d-flex align-self-center">
+                    <input type="checkbox" id="check"/>
+                    <div class="angle"></div>
+                    <label for="check">Producten</label>
+                    <nav>
+                        <ul class="">
+                            <li><a href="#">headsets</a></li>
+                            <li><a href="#">eshe 4et</a></li>
+                            <li><a href="#">van mor</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
-            <div class="flex-5 ml-2">
-                <div class="d-flex justify-content-between align-items-stretch">
-                    <form class="search-container flex-4">
-                        <input type="text" id="search-bar" placeholder=Zoek produc">
-                        <button class="search-button"></button>
-                    </form>
-                    <form class="d-flex toggle " action="#">
-                        <input class="d-none" name="taxes" type="radio" id="excl" value="excl" checked>
-                        <label for="excl">
-                            Excl. BTW
-                        </label>
-                        <input class="d-none" name="taxes" type="radio" id="incl" value="incl">
-                        <label for="incl">Incl. BTW</label>
-                    </form>
-                    <div class="log-in position-relative">
-                        <button href="#">Inloggen</button>
-                    </div>
-                    <div class="position-relative cart d-flex">
-                        <i class="fas fa-shopping-cart align-self-center"></i>
-                        <a href="#">2</a>
-                        <div class="angle"></div>
+                <div class="flex-5 ml-2">
+                    <div class="d-flex justify-content-between align-items-stretch">
+                        <form class="search-container flex-4">
+                            <input type="text" id="search-bar" placeholder=Zoek produc">
+                            <button class="search-button"></button>
+                        </form>
+                        <form class="d-flex toggle " action="#">
+                            <input class="d-none" name="taxes" type="radio" id="excl" value="excl" checked>
+                            <label for="excl">
+                                Excl. BTW
+                            </label>
+                            <input class="d-none" name="taxes" type="radio" id="incl" value="incl">
+                            <label for="incl">Incl. BTW</label>
+                        </form>
+                        <div class="log-in position-relative">
+                            <button href="#">Inloggen</button>
+                        </div>
+                        <div class="position-relative cart d-flex">
+                            <i class="fas fa-shopping-cart align-self-center"></i>
+                            <a href="#">2</a>
+                            <div class="angle"></div>
+
+                        </div>
 
                     </div>
 
                 </div>
-
-            </div>
                 <ul class="w-100 d-flex justify-content-end">
                     <li>Uitstekende klantenservice</li>
                     <li> Gratis levering of afhalen in onze shops</li>
@@ -165,89 +165,109 @@
 
 
     </header>
-    <section class="w-100">
-        <div>
-            <h2>Bestsellers</h2>
-            <div>
-                <button class="prev"></button>
-                <div>
-                    <div>
+    <section class="w-100 carousel-section py-4 ">
+        <div class="carousel container">
+            <h2 class="carousel-header">Bestsellers</h2>
+            <div class="carousel-container d-flex position-relative justify-content-around">
+                <button class="prev">
+                    <span class="prev-arrow"></span>
+                </button>
+                <div class="carousel-item d-flex flex-direction-column">
+                    <div class="carousel-item-image">
+                        <img src="images/drel.png" alt="">
                     </div>
-                    <a>
-                        Schuurmachine FERM Ak450970
-                    </a>
-                    <p>
-                        € 150,-
-                    </p>
-                </div>
-                <div>
                     <div>
+                        <a>
+                            Schuurmachine FERM <br>Ak450970
+                        </a>
+                        <p class="carousel-item-price">
+                            € 150,-
+                        </p>
                     </div>
-                    <a href="#">
-                        Schuurmachine FERM Ak450970
-                    </a>
-                    <p>
-                        € 150,-
-                    </p>
                 </div>
-                <div>
+                <div class="carousel-item d-flex flex-direction-column">
+                    <div class="carousel-item-image">
+                        <img src="images/drel.png" alt="">
+                    </div>
                     <div>
+                        <a>
+                            Schuurmachine FERM <br>Ak450970
+                        </a>
+                        <p class="carousel-item-price">
+                            € 150,-
+                        </p>
                     </div>
-                    <a>
-                        Schuurmachine FERM Ak450970
-                    </a>
-                    <p>
-                        € 150,-
-                    </p>
                 </div>
-                <div>
+                <div class="carousel-item d-flex flex-direction-column">
+                    <div class="carousel-item-image">
+                        <img src="images/drel.png" alt="">
+                    </div>
                     <div>
+                        <a>
+                            Schuurmachine FERM <br>Ak450970
+                        </a>
+                        <p class="carousel-item-price">
+                            € 150,-
+                        </p>
                     </div>
-                    <a>
-                        Schuurmachine FERM Ak450970
-                    </a>
-                    <p>
-                        € 150,-
-                    </p>
                 </div>
-                <div>
+                <div class="carousel-item d-flex flex-direction-column">
+                    <div class="carousel-item-image">
+                        <img src="images/drel.png" alt="">
+                    </div>
                     <div>
+                        <a>
+                            Schuurmachine FERM <br>Ak450970
+                        </a>
+                        <p class="carousel-item-price">
+                            € 150,-
+                        </p>
                     </div>
-                    <a>
-                        Schuurmachine FERM Ak450970
-                    </a>
-                    <p>
-                        € 150,-
-                    </p>
                 </div>
-                <button class="next"></button>
+                <div class="carousel-item d-flex flex-direction-column">
+                    <div class="carousel-item-image">
+                        <img src="images/drel.png" alt="">
+                    </div>
+                    <div>
+                        <a>
+                            Schuurmachine FERM <br>Ak450970
+                        </a>
+                        <p class="carousel-item-price">
+                            € 150,-
+                        </p>
+                    </div>
+                </div>
+
+                <button class="next">
+                    <span class="next-arrow"></span>
+                </button>
             </div>
         </div>
     </section>
-    <section class="w-100">
+    <section class="w-100 pb-4">
         <div class="container d-flex banners">
 
-        <div class="flex-1">
-            <h2>
-                Nachtbezorging
-            </h2>
-            <p>
-                Vandaag besteld vannacht al in huis
-            </p>
-        </div>
-        <div class="flex-1">
-            <h2>
-                Nachtbezorging
-            </h2>
-            <p>
-                Vandaag besteld vannacht al in huis
-            </p>
-        </div>
+            <div class="flex-1">
+                <h2>
+                    Nachtbezorging
+                </h2>
+                <p>
+                    Vandaag besteld vannacht al in huis
+                </p>
+            </div>
+            <div class="flex-1">
+                <h2>
+                    Nachtbezorging
+                </h2>
+                <p>
+                    Vandaag besteld vannacht al in huis
+                </p>
+            </div>
         </div>
     </section>
-    <footer class="w-100">
-        <div>
-            <div>
+    <footer class="w-100 ">
+        <div class="container d-flex justify-content-between py-4">
+            <div class="flex-3">
                 <h2>
                     Over bedrijf
                 </h2>
@@ -263,7 +283,7 @@
                     </li>
                 </ul>
             </div>
-            <div>
+            <div class="flex-2">
                 <h2>
                     Klantenservice
                 </h2>
@@ -291,28 +311,31 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <form action="submit">
-                    <input type="text" placeholder="E-mailadres">
-                    <input type="submit" value="Aanmelden">
+            <div class="footer-form flex-2">
+                <h2>Nieuwsbrief</h2>
+                <form class="subscribe d-flex" action="submit">
+                    <input class="w-100 subscribe-item" type="text" placeholder="E-mailadres">
+                    <button class="w-100 m-auto subscribe-item"><span>Aanmelden</span></button>
                 </form>
             </div>
-            <div>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+            <div class="d-flex flex-2">
+                <a href="#"><img src="images/dhl.png" alt=""></a>
+                <a href="#"><img src="images/waarborg.png" alt=""></a>
+                <a href="#"><img src="images/dhl.png" alt=""></a>
+                <a href="#"><img src="images/waarborg.png" alt=""></a>
             </div>
         </div>
-        <div>
-            <div>
-                <a href="#">Algemene voorwarden</a>
-                <a href="#">Algemene voorwarden</a>
-                <a href="#">Algemene voorwarden</a>
-                <a href="#">Algemene voorwarden</a>
-            </div>
-            <div>
-                <p>1.011 beoordelingen</p>
+        <div class="end-footer ">
+            <div class="container d-flex justify-content-between">
+                <div class="end-footer-links">
+                    <a  class="end-footer-link" href="#">Algemene voorwarde </a>
+                    <a  class="end-footer-link" href="#">Privacy</a>
+                    <a class="end-footer-link" href="#">Cookies</a>
+                    <a  class="end-footer-link" href="#">Disclaimer</a>
+                </div>
+                <div>
+                    <p class="stars-block">1.011 beoordelingen</p>
+                </div>
             </div>
         </div>
     </footer>

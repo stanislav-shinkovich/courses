@@ -11,8 +11,12 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 h2,h3{
+    margin: 0;
+}
+p {
     margin: 0;
 }
 button{
@@ -33,7 +37,6 @@ ul {
 .container{
     max-width: 1110px;
     margin: auto;
-    padding: 0 80px 0 80px;
 }
 .d-flex{
     display: flex;
@@ -75,6 +78,12 @@ ul {
 }
 .w-10{
     width:10%;
+}
+.h-100 {
+    height: 100%;
+}
+.flex-direction-column {
+    flex-direction: column;
 }
 .justify-content-center{
     justify-content: center;
@@ -120,13 +129,15 @@ ul {
 .flex-6{
     flex:6;
 }
-.py-5{
+.pt-5{
     padding-top: 50px;
-    padding-bottom: 50px;
+}
+.pb-4{
+    padding-bottom: 40px;
 }
 .py-4{
-    padding-top: 3.33em;
-    padding-bottom: 3.33em;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .my-2{
     margin-top: 1.4em;
@@ -135,7 +146,9 @@ ul {
 .ml-2{
     margin-left: 1.7em;
 }
-
+.m-auto{
+    margin: auto;
+}
 
 
 
@@ -299,7 +312,7 @@ input#search-bar {
     border-width: 0;
     cursor: pointer;
 }
-}
+
 .search-button:focus{
     outline: none;
 }
@@ -317,6 +330,7 @@ input#search-bar {
     background:#000;
 }
 .toggle label {
+    cursor: pointer;
 }
 .log-in{
     background: #fff;
@@ -381,16 +395,107 @@ input#search-bar {
 .banners>div:first-child{
     margin-right: 7px;
     background: url("images/man.png") no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 .banners>div:last-child{
     background: url("images/dad.png") no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 .banners h2{
     font-size: 3.33em;
-    line-height: 32px;
+    line-height: 42px;
 }
 .banners p{
     font-size: 1.17em;
+}
+/*------------  main-carousel ----------------*/
+.carousel-header{
+    font-size: 2.7em;
+    padding-bottom: 10px;
+}
+
+.carousel {
+    background: #f5f5f5;
+    padding: 16px 26px;
+    box-sizing: border-box;
+}
+
+.carousel-item-price{
+    font-size: 3.34em;
+}
+.carousel-item{
+    min-height: 285px;
+    box-sizing: border-box;
+    /*border: 1px solid #e8e8e8;*/
+    justify-content: space-around;
+    padding: 20px 40px 0 40px;
+
+}
+.prev, .next{
+    position: absolute;
+    top: 30%;
+    background: #ffc600;
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+}
+.prev{
+    padding-left: 10px;
+    left: -43px;
+
+}
+.next{
+    right: -43px;
+    padding-right: 10px;
+}
+
+.prev-arrow, .next-arrow{
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-right: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+}
+.prev-arrow{
+    transform: rotate(135deg);
+}
+.next-arrow{
+
+    transform: rotate(-45deg);
+}
+
+/*----------- footer --------------*/
+footer{
+    background: #f5f5f5;
+}
+footer h2{
+    font-size: 2em;
+}
+footer ul{
+    font-size: 1.17em;
+    list-style-type: none;
+    padding: 0;
+}
+.subscribe .subscribe-item{
+    padding: 13px 10px;
+}
+.subscribe button{
+    background: #000;
+    color: #fff;
+}
+.end-footer{
+    background: #fff;
+    font-size: 1.17em;
+    padding: 12px;
+}
+.end-footer-link:nth-child(n):after{
+    content: "  |  ";
+    margin: 0 12px;
+}
+.end-footer-link:last-child:after {
+    display: none;
+}
+.stars-block:before{
+    content: url("images/stars.png");
+    margin-right: 10px;
 }
