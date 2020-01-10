@@ -15,6 +15,7 @@ a{
 }
 h2,h3{
     margin: 0;
+    hyphens: auto;
 }
 p {
     margin: 0;
@@ -172,11 +173,14 @@ ul {
 .plate{
     padding: 2.5em 2.5em 3.33em 2.7em;
     background: #f5f5f5;
-    margin: 0 0 7px 0;
+    border: 5px solid #fff;
+    flex: 1 1 50%;
+    box-sizing: border-box;
+
 }
-.plate:nth-child(3) {
-    margin-right: 7px;
-}
+/*.plate:nth-child(3) {*/
+/*    margin-right: 7px;*/
+/*}*/
 .plate h2 {
     font-size: 2.67em;
 }
@@ -191,7 +195,8 @@ aside p{
     margin: 0;
 }
 aside.plate{
-    padding: 1.75em 1.75em 1.75em 2.9em;
+    flex: 1 1 16%;
+    padding: 1.75em 1.25em 1.75em 2em;
 }
 .buy-button{
     font-size: 1.17em;
@@ -317,6 +322,7 @@ input#search-bar {
     right: 0;
     border-width: 0;
     cursor: pointer;
+
 }
 
 .search-button:focus{
@@ -384,6 +390,12 @@ input#search-bar {
 .cart i{
     padding-right: 50px;
 }
+.extra-info{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    flex-wrap: nowrap;
+}
  .extra-info li{
     display: inline;
     list-style-type: none;
@@ -429,13 +441,18 @@ input#search-bar {
     background: #f5f5f5;
     padding-top: 1.33em;
     box-sizing: border-box;
+    position: relative;
+
 }
 
 .carousel-item-price{
     font-size: 3.34em;
 }
+.carousel-container{
+    overflow: hidden;
+}
 .carousel-item{
-    max-width: 20%;
+    flex: 0 0 20%;
     min-height: 285px;
     box-sizing: border-box;
     border: 1px solid #e8e8e8;
@@ -455,6 +472,7 @@ input#search-bar {
     height: 35px;
     width: 35px;
     border-radius: 50px;
+    z-index: 2;
 }
 .prev{
     padding-left: 10px;
@@ -522,6 +540,11 @@ footer ul{
     align-items: center;
 
 }
+.footer-image img{
+    max-width: 100%;
+}
+
+
 .footer-image {
     width: 50%;
     margin: auto;
@@ -530,7 +553,48 @@ footer ul{
 .footer-image:first-of-type{
     margin-bottom: 10px;
 }
+.toggled{
+    position: absolute;
+    top: 84px;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    margin-right: 0 !important;
+    display: block !important;
+    background: #ffc600;
+    z-index: 10;
+    transition: margin-right 0.5s;
+}
+.burger-wrapper-on .line-1 {
 
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-bottom: -10px;
+
+    transition: 0.3s ;
+
+}
+.burger-wrapper-on .line-2{
+    display: none;
+}
+.burger-wrapper-on .line-3 {
+
+    transform: rotate(45deg);
+    margin-bottom: 3px;
+
+}
+.burger-wrapper{
+    display: none;
+}
+.carousel-item-image{
+    width: 100%;
+}
+.carousel-item-image img{
+    width: 100%;
+}
+.footer-form div{
+    width: 50%;
+}
 @media (max-width: 1139px){
     .plate{
         width: 100%;
@@ -540,6 +604,34 @@ footer ul{
 }
 
 @media (max-width:768px) {
+    .toggle{
+        margin: 0;
+    }
+    .header-nav nav{
+        top: unset;
+    }
+    #check:checked ~ nav{
+        position: relative;
+    }
+    .burger-wrapper{
+        display: block;
+        width: 45px;
+        position: relative;
+        background: inherit;
+    }
+    .hidden-menu{
+        display: none;
+        margin-right: -320px;
+        transition: margin-right 0.5s;
+    }
+    .burger {
+        display: inline-block;
+        width: 100%;
+        height: 4px;
+        background: #000;
+        transition: 0.3s ;
+
+    }
     .main-content{
         display: block;
     }
@@ -593,7 +685,7 @@ footer ul{
         display: none;
     }
     .search-container{
-        display: none;
+        /*display: none;*/
     }
     .header-nav label{
         width: 100%;
@@ -604,11 +696,57 @@ footer ul{
     .extra-info li{
         margin-right: unset;
     }
+    .header-buttons{
+        margin: unset;
+        padding: 14px 0 14px 0;
+    }
+    .search-container{
+        width: 100%;
+        flex: unset;
+        margin: 0 0 14px 0;
+    }
+    .extra-info{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .footer-form{
+        display: block;
+    }
+    .footer-form div{
+        width: 100%;
+    }
+
 }
 
 
 @media(max-width: 576px) {
     footer .container{
         display: block;
+    }
+
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .prev, .next{
+        display: none;
+        top: 100%;
+
+    }
+    .prev{
+        padding-left: 10px;
+        left: 0;
+
+    }
+    .next{
+        right: 0px;
+        padding-right: 10px;
+    }
+    .footer-form div{
+        width: 50%;
     }
 }
