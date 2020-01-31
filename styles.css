@@ -52,6 +52,9 @@ ul {
 .no-wrap{
     flex-wrap: nowrap;
 }
+.m-none{
+    margin: 0;
+}
 .w-100{
     width:100%;
 }
@@ -176,11 +179,11 @@ ul {
     border: 5px solid #fff;
     flex: 1 1 50%;
     box-sizing: border-box;
+    min-width: 385px;
+
 
 }
-/*.plate:nth-child(3) {*/
-/*    margin-right: 7px;*/
-/*}*/
+
 .plate h2 {
     font-size: 2.67em;
 }
@@ -197,6 +200,7 @@ aside p{
 aside.plate{
     flex: 1 1 16%;
     padding: 1.75em 1.25em 1.75em 2em;
+    min-width: 200px;
 }
 .buy-button{
     font-size: 1.17em;
@@ -258,7 +262,7 @@ aside.plate{
     height: 6px;
     width: 6px;
     right: 15px;
-    top: 1.33em;
+    top: 1em;
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
     transform: rotate(45deg);
@@ -275,6 +279,65 @@ aside.plate{
     transform: rotate(-135deg);
     top:1.4em;
 }
+.slider {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(242, 242, 242, 1);
+    position: relative;
+}
+
+.slider__top-title {
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(225, 225, 225, 1);
+}
+
+.slider__items_wrapper {
+    overflow: hidden;
+}
+
+.slider__items {
+    display: flex;
+    justify-content: flex-start;
+    transition: transform .2s ease-in-out;
+}
+
+.slider__item {
+    display: flex;
+    flex: 1 0 20%;
+    flex-direction: column;
+    border-right: 1px solid rgba(225, 225, 225, 1);
+    padding: 25px;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.slider__item a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.slider__item:last-of-type {
+    border-right: 0;
+}
+
+.slider__item img {
+    object-fit: contain;
+    margin: 20px 5px;
+}
+
+.slider__item h5, .slider__item span:nth-of-type(1) {
+    line-height: 20px;
+}
+
+.slider__item span:nth-of-type(2) {
+    line-height: 32px;
+    font-size: calc(20px + 1.04vw); /*40px*/
+}
+
 .header-nav label {
     display: block;
     padding: 0.75em 4.5em 0.75em 0.75em;
@@ -359,7 +422,13 @@ input#search-bar {
 .log-in button{
     height: 100%;
     padding-right: 8px;
+    background: #fff;
+
 }
+.log-in button:focus{
+ outline: none;
+}
+
 .log-in button:before{
     position: absolute;
     left: 0.9em;
@@ -433,8 +502,8 @@ input#search-bar {
 /*------------  main-carousel ----------------*/
 .carousel-header{
     font-size: 2.7em;
-    padding-left: 40px;
-    padding-bottom: 10px;
+
+    line-height: .4;
 }
 
 .carousel {
@@ -462,8 +531,14 @@ input#search-bar {
     padding: 20px 40px 0 40px;
 
 }
+.cart,.log-in,#search-bar, .header-nav{
+    border-radius: 3px;
+}
 .carousel-item:last-of-type{
     border-right: none;
+}
+.carousel-section{
+    overflow: hidden;
 }
 .prev, .next{
     position: absolute;
@@ -546,7 +621,6 @@ footer ul{
 
 
 .footer-image {
-    width: 50%;
     margin: auto;
     text-align: center;
 }
@@ -599,6 +673,15 @@ footer ul{
     .plate{
         width: 100%;
         justify-content: space-around;
+    }
+    .carousel-item-price{
+        font-size: 2em;
+    }
+}
+
+@media (max-width:900px) {
+    .slider__item{
+        flex: 1 0 25%;
 
     }
 }
@@ -607,6 +690,17 @@ footer ul{
     .toggle{
         margin: 0;
     }
+    .slider__item{
+        flex: 1 0 33.33%;
+
+    }
+
+    footer>.container{
+        display: block;
+    }
+    /*.carousel-item-price{*/
+    /*    font-size: 2em;*/
+    /*}*/
     .header-nav nav{
         top: unset;
     }
@@ -717,7 +811,7 @@ footer ul{
         display: block;
     }
     .footer-form div{
-        width: 100%;
+        width: 50%;
     }
 
 }
@@ -747,6 +841,61 @@ footer ul{
         padding-right: 10px;
     }
     .footer-form div{
-        width: 50%;
+        width: 100%;
+    }
+}
+
+
+/*SLIDER STOLLEN*/
+
+
+
+
+
+.delivery {
+    display: flex;
+}
+
+.delivery__item {
+    flex: 1 1 100%;
+    height: 225px;
+    color: rgba(255, 255, 255, 1);
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+    transition: all .15s;
+    margin: 5px 0;
+    background-position: center;
+}
+
+
+
+.delivery__item:hover {
+    filter: sepia(30%);
+    transition: all .15s;
+}
+
+.delivery__item a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.delivery__item h2, .delivery__item span {
+    text-shadow: 2px 2px 5px rgba(170, 170, 170, 1);
+    margin: 5px 0;
+}
+.red{
+    background: rgba(0,0,0,.4);
+}
+@media (max-width: 500px) {
+    .slider__item{
+        flex: 1 0 50%;
+
+    }
+    .plate{
+        min-width: unset;
     }
 }
