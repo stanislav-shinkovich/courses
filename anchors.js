@@ -5,8 +5,7 @@ for (let anchor of anchors) {
         e.preventDefault();
 
         const blockID = anchor.getAttribute('href').substr(1);
-        headerMenu.classList.toggle("toggled");
-        burger.classList.toggle("burger-wrapper-on");
+
 
 
         document.getElementById(blockID).scrollIntoView({
